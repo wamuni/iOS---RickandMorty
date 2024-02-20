@@ -9,12 +9,16 @@ import Foundation
 
 /// Object represents a single API call
 final class RMRequest {
+    /// API Constant
     private struct Constant {
         static let baseUrl = "https://rickandmortyapi.com/api"
     }
     
+    /// Desired endpoint
     private let endpoint: RMEndpoint
+    /// Path component for API, if any
     private let pathComponent: [String]
+    /// Query parameter for API, if any
     private let queryParameter: [URLQueryItem]
     
     /// Constructed URL for api request in string format, computed variable
@@ -49,6 +53,14 @@ final class RMRequest {
         return URL(string: urlString)
     }
     
+    /// Http request method, only GET method
+    public let httpsMethod = "GET"
+    
+    /// constructor
+    /// - parameter
+    ///     - endpoint: character, location or episode
+    ///     - pathComponent: path for URL
+    ///     - queryParameter: query for URL
     public init(
         endpoint: RMEndpoint,
         pathComponent: [String] = [],
