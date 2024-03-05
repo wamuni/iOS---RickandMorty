@@ -9,7 +9,7 @@ import UIKit
 
 final class RMCharacterListView: UIView {
     static let TAG: String = "RMCharacterListView"
-    private let 
+    private let viewmodel = RMCharacterListViewViewModel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)

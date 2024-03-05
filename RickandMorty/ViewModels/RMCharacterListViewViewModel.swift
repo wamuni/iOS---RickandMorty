@@ -9,6 +9,5 @@ import Foundation
 
 final class RMCharacterListViewViewModel {
     public func fetchRMCharacterListData() {
-        RMService.shared.execute(, expecting: <#T##(Decodable & Encodable).Protocol#>, completion: <#T##(Result<Decodable & Encodable, Error>) -> Void#>)
     }
 }
