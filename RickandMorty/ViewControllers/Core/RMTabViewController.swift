@@ -31,16 +31,18 @@ class RMTabViewController: UITabBarController {
         let episodeNavigationItem = UINavigationController(rootViewController: episodeVC)
         let settingNavigationItem = UINavigationController(rootViewController: settingVC)
         
+        let navTabList = [characterNavigationItem, locationNavigationItem, episodeNavigationItem, settingNavigationItem]
+        
         characterNavigationItem.tabBarItem = UITabBarItem(title: "Character", image: UIImage(systemName: "person"), tag: 1)
         locationNavigationItem.tabBarItem = UITabBarItem(title: "Location", image: UIImage(systemName: "globe"), tag: 2)
         episodeNavigationItem.tabBarItem = UITabBarItem(title: "Episode", image: UIImage(systemName: "tv"), tag: 3)
         settingNavigationItem.tabBarItem = UITabBarItem(title: "Setting", image: UIImage(systemName: "gear"), tag: 4)
         
-        for nav in [characterNavigationItem, locationNavigationItem, episodeNavigationItem, settingNavigationItem] {
+        for nav in navTabList {
             nav.navigationBar.prefersLargeTitles = true
         }
         
-        setViewControllers([characterNavigationItem, locationNavigationItem, episodeNavigationItem, settingNavigationItem], animated: true)
+        setViewControllers(navTabList, animated: true)
     }
 
 }
