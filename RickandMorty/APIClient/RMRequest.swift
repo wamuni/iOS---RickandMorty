@@ -28,17 +28,17 @@ final class RMRequest {
         urlString += endpoint.rawValue
         
         if !pathComponent.isEmpty {
-            pathComponent.forEach({
-                urlString += "/\($0)"
+            pathComponent.forEach({ component in
+                urlString += "/\(component)"
             })
         }
         
         if !queryParameter.isEmpty {
             urlString += "?"
             
-            let argumentString = queryParameter.compactMap({
-                guard let value = $0.value else { return nil }
-                return "\($0.name)=\(value)"
+            let argumentString: String = queryParameter.compactMap({ param in
+                guard let value = param.value else { return nil }
+                return "\(param.name)=\(value)"
             }).joined(separator: "&")
             
             urlString += argumentString
@@ -50,7 +50,7 @@ final class RMRequest {
     
     /// Convert urlString to URL
     public var url: URL? {
-        return URL(string: urlString)
+        return URL(string: self.urlString)
     }
     
     /// Http request method, only GET method

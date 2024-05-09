@@ -7,7 +7,7 @@
 
 import UIKit
 /// Controller to show tab bar
-class RMTabViewController: UITabBarController {
+final class RMTabViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

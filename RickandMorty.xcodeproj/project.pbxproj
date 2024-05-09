@@ -142,6 +142,7 @@
 			children = (
 				FEC60F052B97C64900367C9E /* Other */,
 				FEC60F062B97C65700367C9E /* Core */,
+				FE2129632B854D03002D97EC /* RMTabViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -231,7 +232,6 @@
 		FEC60F062B97C65700367C9E /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				FE2129632B854D03002D97EC /* RMTabViewController.swift */,
 				FE2129952B8551E2002D97EC /* RMLocationViewController.swift */,
 				FE2129972B8551FA002D97EC /* RMCharacterViewController.swift */,
 				FE2129992B85520D002D97EC /* RMEpisodeViewController.swift */,

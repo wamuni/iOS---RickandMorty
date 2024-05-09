@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RMCharacterDetailView: UIView {
+final class RMCharacterDetailView: UIView {
     
     static let TAG: String = "RMCharacterDetailView"
     

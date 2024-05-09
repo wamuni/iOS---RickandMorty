@@ -51,14 +51,15 @@ final class RMService {
     
     /// @name: request
     /// @parameter: from rmRequest: RMRequest
-    ///
+    /// @desc: This function convert RMRequest object to URLRequest
     /// @return: URLRequest?
     private func request(from rmReqeuest: RMRequest) -> URLRequest? {
         guard let url = rmReqeuest.url else {
             return nil
         }
+        // built-in URLRequest init
         var request = URLRequest(url: url)
-        request.httpMethod = rmReqeuest.httpsMethod
+        request.httpMethod = rmReqeuest.httpsMethod // set up the request method, which is "GET"
         return request
     }
 }
